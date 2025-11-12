@@ -1,0 +1,58 @@
+name: SimpleNPCSystem
+version: '1.2'
+main: Sypherox.NPCSystem
+api-version: '1.21'
+java-version: '21'
+author: Sypherox
+
+commands:
+  npc:
+    description: Main NPC command
+    usage: /npc <subcommand>
+    aliases: [mannequin, mnpc]
+
+permissions:
+  npc.admin:
+    description: Full access to all NPC commands
+    default: op
+    children:
+      npc.create: true
+      npc.delete: true
+      npc.skin: true
+      npc.hologram: true
+      npc.action: true
+      npc.eyecontact: true
+      npc.list: true
+      npc.teleport: true
+
+  npc.create:
+    description: Create NPCs
+    default: op
+
+  npc.delete:
+    description: Delete NPCs
+    default: op
+
+  npc.skin:
+    description: Change NPC skins
+    default: op
+
+  npc.hologram:
+    description: Manage NPC holograms
+    default: op
+
+  npc.action:
+    description: Set NPC actions
+    default: op
+
+  npc.eyecontact:
+    description: Toggle NPC eye contact
+    default: op
+
+  npc.list:
+    description: List all NPCs
+    default: op
+
+  npc.teleport:
+    description: Teleport to NPCs
+    default: op
